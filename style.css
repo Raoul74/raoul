@@ -1,0 +1,73 @@
+
+.grid-container{
+    display:grid;
+    color: rgb(247, 4, 4);
+    grid-template-columns: 90%   10%;
+    padding:20px;
+    background: rgb(55, 253, 5);
+    
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    " inp1 inp2"
+    " ta  ta "
+    " btn  btn";
+}
+#firstname{
+    grid-area: inp1;
+    
+}
+#surname{
+    grid-area:inp2;
+}
+input[type="subnit"] {
+    grid-area:btn;
+}
+input, textarea{
+    margin: 5px; 
+    height: 30px;
+    padding: 10px;
+    border: 1px  solid red;
+    border-radius: 5px;
+    font-size: 9pt;
+}
+textarea{
+    resize: none;
+    grid-area: ta;
+}
+.img{
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+@media screen and ( max-width:930px){
+    .grid-container{
+        display:block;
+    }
+    
+    
+}
+/* responsive */
+@media screen and (max-width:650px)
+{
+    form{ 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "inp1" "inp2" "ta" "btn";
+    }
+}
+    
